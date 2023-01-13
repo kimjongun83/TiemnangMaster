@@ -1,0 +1,58 @@
+@import '@/assets/styles/_global.scss';
+
+.UsersTable {
+  background: $white;
+  padding: 32px 24px;
+  margin-bottom: 10px;
+
+  &-header {
+    margin-bottom: 50px;
+
+    &-title {
+      font-size: 14px;
+      color: rgba($black, 0.85);
+    }
+  }
+
+  &-status-list {
+    &-item {
+      &.cancel {
+        .UsersTable-status-list-item {
+          &-circle {
+            background: $alto;
+          }
+
+          &-label {
+            color: rgba($black, 0.45)
+          }
+        }
+      }
+
+      &.success {
+        .UsersTable-status-list-item {
+          &-circle {
+            background: $lima;
+          }
+        }
+      }
+
+
+      &-circle {
+        flex: 0 0 6px;
+        max-width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      &-label {
+        font-size: 14px;
+        color: rgba($black, 0.85);
+      }
+    }
+  }
+
+  &-pagination {
+    margin-top: 24px;
+  }
+}

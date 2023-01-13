@@ -1,0 +1,257 @@
+@import '../../../assets/styles/global';
+.Header {
+  &-client {
+    &-top {
+      background-color: $black-1;
+      padding: 8px 0;
+
+      &-infomation {
+        &-contact {
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-bottom: 0;
+          color: $white;
+          transition: color 0.3s;
+          font-size: 16px;
+          font-weight: 600;
+          @media (max-width: 441px) {
+            font-size: 12.8px;
+          }
+          @media (min-width: 442px) and (max-width: 990px) {
+            font-size: 12.8px;
+          }
+          &:hover {
+            color: $orange;
+          }
+          &-icon {
+            margin-right: 4px;
+            font-size: 10px;
+            color: $white;
+            @media (max-width: 991px) {
+              font-size: 7px;
+            }
+          }
+        }
+      }
+    }
+    &-middle {
+      @media (max-width: 991px) {
+        padding: 10px 0;
+      }
+      &-information {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-logo {
+          @media (max-width: 991px) {
+            max-width: 23.5rem;
+            img {
+              width: 100%;
+            }
+          }
+          @media (max-width: 551px) {
+            max-width: 14rem;
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        &-search {
+          width: 50%;
+          margin: 0 auto;
+          @media (min-width: 992px) and (max-width: 1115px) {
+            width: 40%;
+          }
+          .Input.affix {
+            position: relative;
+            .ant-input-affix-wrapper {
+              height: auto;
+              padding: 0.8rem 3.2rem;
+              background: $white-1;
+              border-radius: 5rem;
+             
+              .ant-input {
+                font-size: 1.8rem;
+                font-weight: 500;
+                background: transparent;
+
+                .ant-input-suffix {
+                  margin-left: 4px;
+                }
+              }
+            }
+            .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+              border-color: $orange;
+            }
+          }
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+        &-account {
+          display: flex;
+          align-items: center;
+          .account-name {
+            margin-right: 28px;
+            @media (max-width: 991px) {
+              margin-right: 1.8rem;
+            }
+            span {
+              font-size: 20px;
+              font-weight: 500;
+              text-transform: capitalize;
+              @media (min-width: 992px) and (max-width: 1115px) {
+                font-size: 17px;
+              }
+              @media (max-width: 991px) {
+                font-size: 14px;
+              }
+              @media (max-width: 414px) {
+                display: flex;
+              }
+            }
+          }
+          .toogle {
+            display: none;
+            @media (max-width: 991px) {
+              display: block;
+              cursor: pointer;
+            }
+          }
+          .dropdown-menu {
+            display: none;
+            @media (max-width: 991px) {
+              display: block;
+            }
+            &-close {
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 20px;
+              padding: 10px 0px;
+              cursor: pointer;
+            }
+            &-total {
+              position: fixed;
+              top: 0;
+              right: 0;
+              height: 100vh;
+              width: 40rem;
+              background: $orange;
+
+              transform: translateX(100%);
+              transition: 0.3s ease-in;
+
+              z-index: 4;
+              pointer-events: none;
+            }
+            .active {
+              pointer-events: unset;
+
+              transform: translateX(0%);
+            }
+            &-search {
+              margin: 0 auto;
+              margin-bottom: 2.4rem;
+              .Input.affix {
+                position: relative;
+                .ant-input-affix-wrapper {
+                  height: auto;
+                  padding: 0.4rem 3.2rem;
+                  background: $white-1;
+                  border-radius: 5rem;
+
+                  .ant-input {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    background: transparent;
+
+                    .ant-input-suffix {
+                      margin-left: 4px;
+                    }
+                  }
+                }
+                .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+                  border-color: $orange;
+                }
+              }
+            }
+            &-wrapper {
+              &-list {
+                &-item {
+                  font-weight: 500;
+                  padding: 1.2rem 0;
+                  display: block;
+                  cursor: pointer;
+                  color: $gray-link;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      border-top: 1px solid $white-1;
+      border-bottom: 1px solid $white-1;
+      &-wrapper {
+        &-list {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin: 0 auto;
+          max-width: 65%;
+
+          &-item {
+            position: relative;
+
+            padding: 1.2rem 0;
+            display: block;
+            cursor: pointer;
+            &:hover {
+              &::before {
+                transform: translateX(-50%) scaleX(1);
+
+                @media (max-width: 991px) {
+                  transform: translateX(0%) scaleX(1);
+                }
+              }
+            }
+            &::before {
+              position: absolute;
+              content: '';
+              transition: 0.3s ease;
+              width: 0.6rem;
+              border-radius: 50%;
+              height: 0.6rem;
+              background: $orange;
+              left: 50%;
+              -webkit-transform: translateX(-50%) scaleX(0);
+              transform: translateX(-50%) scaleX(0);
+              bottom: 1rem;
+            }
+            &-link {
+              color: $gray-link;
+              font-size: 2rem;
+              font-weight: 500;
+              &:hover {
+                color: $gray-link;
+              }
+              @media (min-width: 992px) {
+                font-size: 14px;
+              }
+            }
+            .active {
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        display: none;
+      }
+     
+    }
+  }
+}

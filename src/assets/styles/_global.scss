@@ -1,0 +1,108 @@
+@import '~@shopify/polaris/build/esm/styles.css';
+@import '~antd/dist/antd.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '~animate.css/animate.min.css';
+@import './fonts';
+@import './colors';
+@import './constants';
+@import './mixins';
+
+html {
+  font-size: 10px;
+  @media (max-width: 991px) {
+    font-size: 7px;
+  }
+}
+* {
+  font-weight: 400;
+  scroll-behavior: smooth;
+  line-height: 1.4;
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  background: $athens-gray;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.ant-notification-notice {
+  padding-right: 48px;
+}

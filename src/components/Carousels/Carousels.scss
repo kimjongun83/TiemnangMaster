@@ -1,0 +1,25 @@
+@import '../../assets/styles/global';
+
+.Carousels {
+
+  .slick-next,
+  .slick-prev {
+    &:hover {
+      .Icon {
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+
+    .Icon {
+      svg path {
+        transition: $common-transition;
+      }
+    }
+  }
+}

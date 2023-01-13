@@ -1,0 +1,43 @@
+@import '../../assets/styles/global';
+
+.Header {
+  height: auto;
+  padding: 0 16px;
+
+  &-wrapper {
+    height: 48px;
+  }
+
+  &-logo {
+    img {
+      flex: 0 0 30px;
+      max-width: 30px;
+      margin-right: 8px;
+    }
+
+    span {
+      color: $white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &-account {
+    font-size: 14px;
+    color: $white;
+
+    .Avatar {
+      margin-right: 8px;
+    }
+  }
+
+  &-actions {
+
+    .Button {
+      .ant-btn {
+        font-size: 14px;
+        color: $white;
+      }
+    }
+  }
+}

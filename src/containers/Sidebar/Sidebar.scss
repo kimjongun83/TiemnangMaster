@@ -1,0 +1,27 @@
+@import '@/assets/styles/_global.scss';
+
+.Sidebar {
+  box-shadow: 0px 2px 8px rgba($black, 0.15);
+
+  .ant-layout-sider-trigger {
+    display: none;
+  }
+
+  &-toggle {
+    transition: $common-transition;
+    padding: 12px 16px;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: inset 0px 1px 0px $gallery;
+  }
+
+  .ant-menu-submenu:hover>.ant-menu-submenu-title>.ant-menu-submenu-expand-icon,
+  .ant-menu-submenu:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow,
+  .ant-menu-light .ant-menu-item:hover,
+  .ant-menu-light .ant-menu-item-active,
+  .ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+  .ant-menu-light .ant-menu-submenu-active,
+  .ant-menu-light .ant-menu-submenu-title:hover {
+    color: $limeade;
+  }
+}

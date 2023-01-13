@@ -1,0 +1,95 @@
+@import '@/assets/styles/_global.scss';
+
+.Omega-Date-Range {
+  width: 572px;
+  min-height: 452px;
+  max-height: 481px;
+  background-color: #fff;
+
+  .Polaris-DatePicker__MonthLayout {
+    margin-top: -12px;
+  }
+
+  caption {
+    caption-side: top;
+    color: #000000;
+  }
+
+  .Omega-Date-Range-Content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(221, 221, 221, 0.103);
+  }
+}
+
+.Omega-Select {
+  display: flex;
+  flex-direction: column;
+
+  select {
+    padding-right: 16px;
+    padding-left: 16px;
+    line-height: 38px;
+
+    option {
+      font-size: 16px;
+      font-weight: normal;
+      display: block;
+      white-space: nowrap;
+      min-height: 1.2em;
+      padding: 0px 2px 1px;
+    }
+  }
+
+  .ant-select-selector {
+    min-height: 36px;
+  }
+
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-radius: 4px;
+  }
+
+  .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.OmegaDateRange {
+  &-btn {
+    .Polaris-Button {
+      height: 32px;
+      min-height: auto;
+      border-color: #d9d9d9;
+      border-radius: 2px;
+
+      .Polaris-Button__Content {
+        flex-direction: row-reverse;
+      }
+
+      .Polaris-Button__Icon+*:not(.Polaris-Button__Icon) {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.Polaris-Popover__Content {
+  max-width: unset;
+  max-height: unset;
+
+  .Polaris-Button--primary,
+  .Polaris-Button--destructive {
+    background: $dodger-blue;
+  }
+
+  .Polaris-DatePicker__Day--selected {
+    background: $dodger-blue;
+  }
+}
