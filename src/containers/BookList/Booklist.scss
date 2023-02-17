@@ -1,0 +1,7 @@
+.Book-content {
+  width: calc(20%);
+  &-img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

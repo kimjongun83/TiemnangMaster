@@ -2,7 +2,6 @@ const getLoadingMatches = (actionType) => /(.*)_(REQUEST|SUCCESS|FAILED)/.exec(a
 
 const loadingReducer = (state = {}, action) => {
   const matches = getLoadingMatches(action.type);
-  console.log(matches);
 
   if (!matches) {
     return state;

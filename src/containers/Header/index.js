@@ -1,3 +1,3 @@
-import Header from './Header';
+import HeaderClient from './Header';
 
-export default Header;
+export default HeaderClient;

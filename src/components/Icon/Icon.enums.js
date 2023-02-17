@@ -7,7 +7,8 @@ export const EIconName = {
   Phone: 'Phone',
   Search: 'Search',
   Close: 'Close',
-  Toogle: 'Toolgle',
+  Toogle: 'Toogle',
+  CloseSquare: 'CloseSquare',
 };
 
 export const EIconColor = {

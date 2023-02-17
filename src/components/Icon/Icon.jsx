@@ -13,6 +13,7 @@ import Phone from './Phone';
 import Search from './Search';
 import Close from './Close';
 import Toogle from './Toogle';
+import CloseSquare from './CloseSquare';
 
 const Icon = ({ name, className, color, onClick }) => {
   const renderIcon = () => {
@@ -35,6 +36,8 @@ const Icon = ({ name, className, color, onClick }) => {
         return <Close color={color} />;
       case EIconName.Toogle:
         return <Toogle color={color} />;
+      case EIconName.CloseSquare:
+        return <CloseSquare color={color} />;
       default:
         return <></>;
     }

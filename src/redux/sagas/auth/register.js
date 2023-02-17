@@ -10,7 +10,7 @@ export function* registerSaga(action) {
   try {
     const response = yield call(register, materials);
     const registerResponse = response;
-    console.log(registerResponse, 'register response');
+
     Helpers.storeAccessToken(response?.data?.token || '');
     yield put(registerAction.success(registerResponse));
     successCallback?.(registerResponse);

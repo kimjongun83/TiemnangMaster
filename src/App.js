@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Redirect, Router } from '@reach/router';
 
-import { AuthRoute, LayoutPaths, Pages, Paths, ProtectedRoute, PublicRoute } from '@/pages/routers';
+import { LayoutPaths, Pages, Paths, PublicRoute } from '@/pages/routers';
 import Guest from '@/layouts/Guest';
-import Auth from '@/layouts/Auth';
-import Admin from '@/layouts/Admin';
 
 import './App.scss';
+import { uiActions } from '@/redux/actions';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const updateSize = () => {
+      dispatch(uiActions.setDevice(window.innerWidth));
+    };
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, [dispatch]);
   return (
     <>
       <div className="App">
@@ -21,18 +29,6 @@ const App = () => {
             <PublicRoute path={Paths.Consulting} component={Pages.Consulting} />
             <Redirect noThrow from={Paths.Rest} to={`${LayoutPaths.Guest}${Paths.Home}`} />
           </Guest>
-
-          <Auth path={LayoutPaths.Auth}>
-            <PublicRoute path={Paths.Register} component={Pages.Register} />
-            <PublicRoute path={Paths.Login} component={Pages.Login} />
-
-            <Redirect noThrow from={Paths.Rest} to={`${LayoutPaths.Auth}${Paths.Login}`} />
-          </Auth>
-
-          <Admin path={LayoutPaths.Admin}>
-            <ProtectedRoute path={Paths.Users} component={Pages.Users} />
-            <Redirect noThrow from={Paths.Rest} to={`${LayoutPaths.Admin}${Paths.Users}`} />
-          </Admin>
         </Router>
       </div>
     </>

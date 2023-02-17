@@ -20,14 +20,11 @@ const retryLoadComponent = (fn, retriesLeft = 5, interval = 1000) =>
       });
   });
 
-const Users = lazy(() => retryLoadComponent(() => import('@/pages/Admin/Users')));
-const Register = lazy(() => retryLoadComponent(() => import('@/pages/Auth/Register')));
-const Home = lazy(() => retryLoadComponent(() => import('@/pages/Client/pages/Home')));
-const AboutUs = lazy(() => retryLoadComponent(() => import('@/pages/Client/pages/Contact')));
-const Article = lazy(() => retryLoadComponent(() => import('@/pages/Client/pages/Article')));
-const Login = lazy(() => retryLoadComponent(() => import('@/pages/Auth/Login')));
-const Course = lazy(() => retryLoadComponent(() => import('@/pages/Client/pages/Course')));
-const Consulting = lazy(() => retryLoadComponent(() => import('@/pages/Client/pages/Consulting')));
+const Home = lazy(() => retryLoadComponent(() => import('@/pages/Home')));
+const AboutUs = lazy(() => retryLoadComponent(() => import('@/pages/Contact')));
+const Article = lazy(() => retryLoadComponent(() => import('@/pages/Article')));
+const Course = lazy(() => retryLoadComponent(() => import('@/pages/Course')));
+const Consulting = lazy(() => retryLoadComponent(() => import('@/pages/Consulting')));
 export const LayoutPaths = {
   Auth: '/auth',
   Guest: '/',
@@ -52,10 +49,7 @@ export const Paths = {
 };
 
 export const Pages = {
-  Users,
   Home,
-  Register,
-  Login,
   AboutUs,
   Article,
   Course,

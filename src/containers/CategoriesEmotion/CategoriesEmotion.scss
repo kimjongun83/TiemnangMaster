@@ -1,0 +1,82 @@
+@import '@/assets/styles/_global.scss';
+
+.CategoriesEmotion {
+  position: relative;
+  background: linear-gradient(91.37deg, rgba(2, 62, 119, 0.483) 0.43%, rgba(2, 62, 119, 0.7) 100%);
+  box-shadow: $common-shadow;
+  padding: 3.6rem 0;
+
+  &-filters {
+    &-item {
+
+      &-title {
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        position: sticky;
+        left: 0;
+        width: 100%;
+
+        &.sticky {
+          width: unset;
+          text-align: left;
+        }
+      }
+
+      &-list {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        &-item {
+          cursor: pointer;
+          padding: .4rem 1rem;
+          transition: $common-transition;
+          background: $white;
+          margin-right: 1.2rem;
+
+          &:hover,
+          &.active {
+            background: $orange-peel;
+            color: $white;
+          }
+
+          &-icon {
+            flex: 0 0 2rem;
+            max-width: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1.2rem;
+            @include centerScaleImage;
+
+            img {
+              border-radius: 50%;
+            }
+          }
+
+          &-label {
+            flex: 1;
+            font-size: 1.6rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  &-loadmore {
+    margin-top: 0.3rem;
+    text-align: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: $orange-peel;
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+}
